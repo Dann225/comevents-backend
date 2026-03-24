@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: comevents-twilio
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        value: AC782060363ed3d5aa0063cfc7b3c6abca
+      - key: TWILIO_PHONE_NUMBER
+        value: +13185836464
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWIML_APP_SID
+        sync: false
+      - key: PORT
+        value: 3000
